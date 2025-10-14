@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacqueline's Rezeptfreundin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Jacqueline's Rezeptfreundin</h1>
+        </header>
+
+        <main class="chat-interface">
+            <div class="chat-window">
+                <div class="message bot-message">
+                    <p>Hallo! Ich bin deine Rezeptfreundin. Wie fühlst du dich gerade? ... oder was hast du im Kühlschrank?</p>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <div class="preferences">
+                    <label><input type="checkbox" name="preference" value="glutenfrei"> Glutenfrei</label>
+                    <label><input type="checkbox" name="preference" value="laktosefrei"> Laktosefrei</label>
+                    <label><input type="checkbox" name="preference" value="vegetarisch"> Vegetarisch</label>
+                    <label><input type="checkbox" name="preference" value="vegan"> Vegan</label>
+                </div>
+                <div class="text-input-wrapper">
+                    <input type="text" id="user-input" placeholder="Sprich oder tippe hier...">
+                    <button id="mic-button">🎤</button>
+                    <button id="send-button">Senden</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
