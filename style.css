@@ -11,44 +11,57 @@
 body {
     margin: 0;
     font-family: var(--font-main);
-    /* NEU: Dein Foto als Hintergrundbild */
     background-image: url('hintergrund.jpg');
-    background-size: cover; /* Stellt sicher, dass das Bild den ganzen Bildschirm füllt */
+    background-size: cover;
     background-position: center;
     color: var(--color-text);
     display: flex;
-    justify-content: center;
     align-items: center;
     min-height: 100vh;
+    /* Standardmäßig zentriert (für Mobile) */
+    justify-content: center; 
 }
 
 /* Der Hauptcontainer der App */
 .app-container {
-    width: 100%;
-    max-width: 800px;
+    width: 90%; /* Etwas breiter auf Mobile */
+    max-width: 600px; /* Etwas schmaler für ein besseres Chat-Gefühl */
     height: 90vh;
-    max-height: 800px;
+    max-height: 750px;
     background-color: white;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
 
 .app-header {
-    padding: 20px;
+    padding: 15px 20px;
     text-align: center;
     border-bottom: 1px solid var(--color-border);
+    background-color: #fff;
 }
 
+/* NEU: Header mit Avatar */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.header-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 .app-header h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 22px;
     color: var(--color-primary);
 }
 
-/* Das eigentliche Chat-Interface */
 .chat-interface {
     flex-grow: 1;
     display: flex;
@@ -56,37 +69,42 @@ body {
     padding: 20px;
 }
 
-/* Das Fenster, in dem die Nachrichten erscheinen */
 .chat-window {
     flex-grow: 1;
-    overflow-y: auto; /* Ermöglicht Scrollen, wenn viele Nachrichten da sind */
+    overflow-y: auto;
     margin-bottom: 20px;
 }
 
-.message {
+/* NEU: Container für Avatar + Nachricht */
+.message-wrapper {
+    display: flex;
+    align-items: flex-end; /* Avatar und Box unten bündig */
+    gap: 10px;
     margin-bottom: 15px;
-    max-width: 80%;
 }
-
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0; /* Verhindert, dass der Avatar schrumpft */
+}
 .bot-message {
     background-color: var(--color-bg-light);
     padding: 15px;
-    border-radius: 15px 15px 15px 0; /* Abgerundete Ecken */
+    border-radius: 15px 15px 15px 0;
     line-height: 1.6;
 }
-
 .bot-message p {
     margin: 0;
     font-size: 16px;
 }
 
-/* Der untere Bereich für die Eingabe */
 .input-area {
     border-top: 1px solid var(--color-border);
     padding-top: 20px;
 }
 
-/* Die Checkboxen für die Vorlieben */
 .preferences {
     display: flex;
     flex-wrap: wrap;
@@ -94,19 +112,16 @@ body {
     margin-bottom: 15px;
     font-size: 14px;
 }
-
 .preferences label {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
 
-/* Das eigentliche Eingabefeld mit Buttons */
 .text-input-wrapper {
     display: flex;
     gap: 10px;
 }
-
 #user-input {
     flex-grow: 1;
     border: 1px solid var(--color-border);
@@ -115,7 +130,6 @@ body {
     font-size: 16px;
     font-family: var(--font-main);
 }
-
 #mic-button, #send-button {
     border: none;
     background-color: var(--color-primary);
@@ -126,8 +140,19 @@ body {
     font-size: 24px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    flex-shrink: 0;
 }
-
 #mic-button:hover, #send-button:hover {
     background-color: var(--color-secondary);
+}
+
+/* NEU: Anpassungen für große Bildschirme (Tablet/Desktop) */
+@media (min-width: 1024px) {
+    body {
+        justify-content: flex-start; /* Richtet die App-Box links aus */
+        padding-left: 5%; /* Fügt einen Abstand zum linken Rand hinzu */
+    }
+    .app-container {
+        max-width: 550px; /* Macht die Box auf Desktop etwas schmaler, wie eine echte Chat-App */
+    }
 }
