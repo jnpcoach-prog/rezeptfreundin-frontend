@@ -1,0 +1,195 @@
+/* Globale Einstellungen & Farbvariablen */
+:root {
+    --color-text: #2d2d2d;
+    --color-primary: #445e11;
+    --color-secondary: #83a725;
+    --color-bg-light: #fdf8f4;
+    --color-border: #e0e0e0;
+    --font-main: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    background-image: url('hintergrund.jpg');
+    background-size: cover;
+    background-position: center;
+    /* KORREKTUR: 'fixed' entfernt, was auf Mobilgeräten Probleme macht */
+    background-attachment: scroll; 
+    color: var(--color-text);
+    min-height: 100vh;
+}
+
+/* Der Container, der alles zentriert */
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Der Hauptcontainer der App */
+.app-container {
+    width: 100%;
+    max-width: 600px;
+    /* KORREKTUR: Starre Höhen entfernt, damit sich die Box an den Inhalt anpasst */
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.app-header {
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+    background-color: #fff;
+    flex-shrink: 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.header-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.app-header h1 {
+    margin: 0;
+    font-size: 22px;
+    color: var(--color-primary);
+}
+
+.chat-interface {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.chat-window {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    min-height: 300px; /* Gibt dem Chatfenster eine Mindesthöhe */
+}
+
+.message-wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.bot-message {
+    background-color: var(--color-bg-light);
+    padding: 15px;
+    border-radius: 15px 15px 15px 0;
+    line-height: 1.6;
+}
+.bot-message p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.input-area {
+    border-top: 1px solid var(--color-border);
+    padding-top: 20px;
+    flex-shrink: 0;
+}
+
+.preferences {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+.preferences label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.text-input-wrapper {
+    display: flex;
+    gap: 10px;
+}
+#user-input {
+    flex-grow: 1;
+    border: 1px solid var(--color-border);
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-family: var(--font-main);
+}
+#mic-button, #send-button {
+    border: none;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0;
+}
+#mic-button:hover, #send-button:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Footer außerhalb der Box */
+.footer {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px 20px;
+    margin-top: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
+.footer .copyright {
+    margin-top: 10px;
+    font-size: 11px;
+    color: white;
+    opacity: 0.8;
+    margin-bottom: 0;
+}
+
+/* Anpassungen für große Bildschirme */
+@media (min-width: 1024px) {
+    .page-wrapper {
+        align-items: flex-start; /* Box links ausrichten */
+        padding-left: 5%;
+    }
+}
