@@ -9,13 +9,19 @@
 <body>
     <div class="app-container">
         <header class="app-header">
-            <h1>Jacqueline's Rezeptfreundin</h1>
+            <div class="header-content">
+                <img src="foto-hero.jpg" alt="Jacqueline" class="header-avatar">
+                <h1>Jacqueline's Rezeptfreundin</h1>
+            </div>
         </header>
 
         <main class="chat-interface">
             <div class="chat-window">
-                <div class="message bot-message">
-                    <p>Hey! Ich bin's, deine Rezeptfreundin. Wie geht's dir heute? <br>Sag mir einfach, worauf du Lust hast, worauf ich achten soll oder was dein Kühlschrank noch so hergibt.</p>
+                <div class="message-wrapper">
+                    <img src="foto-hero.jpg" alt="Jacqueline" class="avatar">
+                    <div class="message bot-message">
+                        <p>Hey! Ich bin's, deine Rezeptfreundin. Wie geht's dir heute? Sag mir einfach, worauf du Lust hast, worauf ich achten soll oder was dein Kühlschrank noch so hergibt.</p>
+                    </div>
                 </div>
             </div>
 
@@ -27,7 +33,6 @@
                     <label><input type="checkbox" name="preference" value="vegan"> Vegan</label>
                     <label><input type="checkbox" name="preference" value="histaminarm"> Histaminarm</label>
                 </div>
-            </div>
                 <div class="text-input-wrapper">
                     <input type="text" id="user-input" placeholder="Sprich oder tippe hier...">
                     <button id="mic-button">🎤</button>
