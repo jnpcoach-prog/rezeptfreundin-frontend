@@ -36,8 +36,8 @@ body {
 .app-container {
     width: 100%;
     max-width: 600px;
-    height: 85vh; /* Höhe leicht angepasst */
-    max-height: 750px;
+    /* Die starre Höhe wurde entfernt, damit sich die Box an den Inhalt anpasst */
+    max-height: 750px; /* Die maximale Höhe bleibt als Begrenzung */
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
