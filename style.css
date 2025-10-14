@@ -20,7 +20,7 @@ body {
     min-height: 100vh;
 }
 
-/* Der Container, der alles zentriert */
+/* NEU: Der Container, der alles zentriert */
 .page-wrapper {
     display: flex;
     flex-direction: column;
@@ -36,7 +36,7 @@ body {
 .app-container {
     width: 100%;
     max-width: 600px;
-    height: 85vh;
+    height: 85vh; /* Höhe leicht angepasst */
     max-height: 750px;
     background-color: white;
     border-radius: 20px;
@@ -157,7 +157,7 @@ body {
     background-color: var(--color-secondary);
 }
 
-/* Footer außerhalb der Box */
+/* NEU: Footer außerhalb der Box */
 .footer {
     width: 100%;
     max-width: 600px;
@@ -177,20 +177,3 @@ body {
     font-weight: 500;
 }
 .footer-links a:hover {
-    text-decoration: underline;
-}
-.footer .copyright {
-    margin-top: 10px;
-    font-size: 11px;
-    color: white;
-    opacity: 0.8; /* Macht den Copyright-Text etwas dezenter */
-    margin-bottom: 0;
-}
-
-/* Anpassungen für große Bildschirme */
-@media (min-width: 1024px) {
-    .page-wrapper {
-        align-items: flex-start; /* Box links ausrichten */
-        padding-left: 5%;
-    }
-}
