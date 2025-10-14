@@ -7,49 +7,52 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app-container">
-        <header class="app-header">
-            <div class="header-content">
-                <img src="foto-hero.jpg" alt="Jacqueline" class="header-avatar">
-                <h1>Jacqueline's Rezeptfreundin</h1>
-            </div>
-        </header>
-
-        <main class="chat-interface">
-            <div class="chat-window">
-                <div class="message-wrapper">
-                    <img src="foto-hero.jpg" alt="Jacqueline" class="avatar">
-                    <div class="message bot-message">
-                        <p>Hey! Ich bin's, deine Rezeptfreundin. Wie geht's dir heute? Sag mir einfach, worauf du Lust hast, worauf ich achten soll oder was dein Kühlschrank noch so hergibt.</p>
+    <div class="page-wrapper">
+        <div class="app-container">
+            <header class="app-header">
+                <div class="header-content">
+                    <img src="foto-hero.jpg" alt="Jacqueline" class="header-avatar">
+                    <h1>Jacqueline's Rezeptfreundin</h1>
+                </div>
+            </header>
+    
+            <main class="chat-interface">
+                <div class="chat-window">
+                    <div class="message-wrapper">
+                        <img src="foto-hero.jpg" alt="Jacqueline" class="avatar">
+                        <div class="message bot-message">
+                            <p>Hey! Ich bin's, deine Rezeptfreundin. Wie geht's dir heute? Sag mir einfach, worauf du Lust hast, worauf ich achten soll oder was dein Kühlschrank noch so hergibt.</p>
+                        </div>
                     </div>
                 </div>
+    
+                <div class="input-area">
+                    <div class="preferences">
+                        <label><input type="checkbox" name="preference" value="glutenfrei"> Glutenfrei</label>
+                        <label><input type="checkbox" name="preference" value="laktosefrei"> Laktosefrei</label>
+                        <label><input type="checkbox" name="preference" value="vegetarisch"> Vegetarisch</label>
+                        <label><input type="checkbox" name="preference" value="vegan"> Vegan</label>
+                        <label><input type="checkbox" name="preference" value="histaminarm"> Histaminarm</label>
+                    </div>
+                    <div class="text-input-wrapper">
+                        <input type="text" id="user-input" placeholder="Sprich oder tippe hier...">
+                        <button id="mic-button">🎤</button>
+                        <button id="send-button">➤</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="https://jnp-coach.com/impressum/" target="_blank">Impressum</a>
+                <a href="https://jnp-coach.com/datenschutzerklarung/" target="_blank">Datenschutz</a>
+                <a href="https://jnp-coach.com/agb/" target="_blank">AGB</a>
             </div>
+            <p class="copyright">© 2025 Jacqueline Näther-Piatraschk | Alle Rechte vorbehalten.</p>
+        </footer>
+    </div>
 
-            <div class="input-area">
-                <div class="preferences">
-                    <label><input type="checkbox" name="preference" value="glutenfrei"> Glutenfrei</label>
-                    <label><input type="checkbox" name="preference" value="laktosefrei"> Laktosefrei</label>
-                    <label><input type="checkbox" name="preference" value="vegetarisch"> Vegetarisch</label>
-                    <label><input type="checkbox" name="preference" value="vegan"> Vegan</label>
-                    <label><input type="checkbox" name="preference" value="histaminarm"> Histaminarm</label>
-                </div>
-                <div class="text-input-wrapper">
-                    <input type="text" id="user-input" placeholder="Sprich oder tippe hier...">
-                    <button id="mic-button">🎤</button>
-                    <button id="send-button">➤</button>
-                </div>
-            </div> 
-        </main>
-    </div>
-<footer class="footer">
-    <div class="footer-links">
-        <a href="https://jnp-coach.com/impressum/" target="_blank">Impressum</a>
-        <a href="https://jnp-coach.com/datenschutzerklarung/" target="_blank">Datenschutz</a>
-        <a href="https://jnp-coach.com/agb/" target="_blank">AGB</a>
-    </div>
-    <p class="copyright">© 2025 Jacqueline Näther-Piatraschk | Alle Rechte vorbehalten.</p>
-</footer>
     <script src="app.js"></script>
-  
 </body>
 </html>
