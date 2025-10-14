@@ -11,7 +11,10 @@
 body {
     margin: 0;
     font-family: var(--font-main);
-    background-color: #f4f7f6;
+    /* NEU: Dein Foto als Hintergrundbild */
+    background-image: url('hintergrund.jpg');
+    background-size: cover; /* Stellt sicher, dass das Bild den ganzen Bildschirm füllt */
+    background-position: center;
     color: var(--color-text);
     display: flex;
     justify-content: center;
