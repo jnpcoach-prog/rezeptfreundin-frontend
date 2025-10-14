@@ -1,0 +1,130 @@
+/* Globale Einstellungen & Farbvariablen */
+:root {
+    --color-text: #2d2d2d;
+    --color-primary: #445e11;
+    --color-secondary: #83a725;
+    --color-bg-light: #fdf8f4;
+    --color-border: #e0e0e0;
+    --font-main: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    background-color: #f4f7f6;
+    color: var(--color-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Der Hauptcontainer der App */
+.app-container {
+    width: 100%;
+    max-width: 800px;
+    height: 90vh;
+    max-height: 800px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.app-header {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: var(--color-primary);
+}
+
+/* Das eigentliche Chat-Interface */
+.chat-interface {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Das Fenster, in dem die Nachrichten erscheinen */
+.chat-window {
+    flex-grow: 1;
+    overflow-y: auto; /* Ermöglicht Scrollen, wenn viele Nachrichten da sind */
+    margin-bottom: 20px;
+}
+
+.message {
+    margin-bottom: 15px;
+    max-width: 80%;
+}
+
+.bot-message {
+    background-color: var(--color-bg-light);
+    padding: 15px;
+    border-radius: 15px 15px 15px 0; /* Abgerundete Ecken */
+    line-height: 1.6;
+}
+
+.bot-message p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Der untere Bereich für die Eingabe */
+.input-area {
+    border-top: 1px solid var(--color-border);
+    padding-top: 20px;
+}
+
+/* Die Checkboxen für die Vorlieben */
+.preferences {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.preferences label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Das eigentliche Eingabefeld mit Buttons */
+.text-input-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+#user-input {
+    flex-grow: 1;
+    border: 1px solid var(--color-border);
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-family: var(--font-main);
+}
+
+#mic-button, #send-button {
+    border: none;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#mic-button:hover, #send-button:hover {
+    background-color: var(--color-secondary);
+}
