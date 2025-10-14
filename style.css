@@ -14,12 +14,13 @@ body {
     background-image: url('hintergrund.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Hält den Hintergrund beim Scrollen fest */
+    /* KORREKTUR: 'fixed' entfernt, was auf Mobilgeräten Probleme macht */
+    background-attachment: scroll; 
     color: var(--color-text);
     min-height: 100vh;
 }
 
-/* NEU: Der Container, der alles zentriert */
+/* Der Container, der alles zentriert */
 .page-wrapper {
     display: flex;
     flex-direction: column;
@@ -35,7 +36,7 @@ body {
 .app-container {
     width: 100%;
     max-width: 600px;
-    height: 85vh; /* Höhe leicht angepasst */
+    height: 85vh;
     max-height: 750px;
     background-color: white;
     border-radius: 20px;
@@ -156,21 +157,24 @@ body {
     background-color: var(--color-secondary);
 }
 
-/* NEU: Footer außerhalb der Box */
+/* Footer außerhalb der Box */
 .footer {
     width: 100%;
     max-width: 600px;
     padding: 15px 20px;
+    margin-top: 15px; /* Fügt einen kleinen Abstand zur App-Box hinzu */
     text-align: center;
     box-sizing: border-box;
+    /* NEU: Dezenter, halb-durchsichtiger Hintergrund für Lesbarkeit */
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
 }
 .footer-links a {
-    color: white; /* Besser lesbar auf dem Foto */
+    color: white;
     text-decoration: none;
     margin: 0 10px;
     font-size: 13px;
     font-weight: 500;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.5); /* Schatten für bessere Lesbarkeit */
 }
 .footer-links a:hover {
     text-decoration: underline;
@@ -179,7 +183,8 @@ body {
     margin-top: 10px;
     font-size: 11px;
     color: white;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    opacity: 0.8; /* Macht den Copyright-Text etwas dezenter */
+    margin-bottom: 0;
 }
 
 /* Anpassungen für große Bildschirme */
