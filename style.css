@@ -14,19 +14,28 @@ body {
     background-image: url('hintergrund.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; /* Hält den Hintergrund beim Scrollen fest */
     color: var(--color-text);
-    display: flex;
-    align-items: center;
     min-height: 100vh;
-    /* Standardmäßig zentriert (für Mobile) */
-    justify-content: center; 
+}
+
+/* NEU: Der Container, der alles zentriert */
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 /* Der Hauptcontainer der App */
 .app-container {
-    width: 90%; /* Etwas breiter auf Mobile */
-    max-width: 600px; /* Etwas schmaler für ein besseres Chat-Gefühl */
-    height: 90vh;
+    width: 100%;
+    max-width: 600px;
+    height: 85vh; /* Höhe leicht angepasst */
     max-height: 750px;
     background-color: white;
     border-radius: 20px;
@@ -41,9 +50,9 @@ body {
     text-align: center;
     border-bottom: 1px solid var(--color-border);
     background-color: #fff;
+    flex-shrink: 0;
 }
 
-/* NEU: Header mit Avatar */
 .header-content {
     display: flex;
     align-items: center;
@@ -67,6 +76,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 20px;
+    overflow: hidden;
 }
 
 .chat-window {
@@ -75,10 +85,9 @@ body {
     margin-bottom: 20px;
 }
 
-/* NEU: Container für Avatar + Nachricht */
 .message-wrapper {
     display: flex;
-    align-items: flex-end; /* Avatar und Box unten bündig */
+    align-items: flex-end;
     gap: 10px;
     margin-bottom: 15px;
 }
@@ -87,7 +96,7 @@ body {
     height: 35px;
     border-radius: 50%;
     object-fit: cover;
-    flex-shrink: 0; /* Verhindert, dass der Avatar schrumpft */
+    flex-shrink: 0;
 }
 .bot-message {
     background-color: var(--color-bg-light);
@@ -103,6 +112,7 @@ body {
 .input-area {
     border-top: 1px solid var(--color-border);
     padding-top: 20px;
+    flex-shrink: 0;
 }
 
 .preferences {
@@ -146,13 +156,36 @@ body {
     background-color: var(--color-secondary);
 }
 
-/* NEU: Anpassungen für große Bildschirme (Tablet/Desktop) */
+/* NEU: Footer außerhalb der Box */
+.footer {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.footer-links a {
+    color: white; /* Besser lesbar auf dem Foto */
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 13px;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5); /* Schatten für bessere Lesbarkeit */
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
+.footer .copyright {
+    margin-top: 10px;
+    font-size: 11px;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Anpassungen für große Bildschirme */
 @media (min-width: 1024px) {
-    body {
-        justify-content: flex-start; /* Richtet die App-Box links aus */
-        padding-left: 5%; /* Fügt einen Abstand zum linken Rand hinzu */
-    }
-    .app-container {
-        max-width: 550px; /* Macht die Box auf Desktop etwas schmaler, wie eine echte Chat-App */
+    .page-wrapper {
+        align-items: flex-start; /* Box links ausrichten */
+        padding-left: 5%;
     }
 }
