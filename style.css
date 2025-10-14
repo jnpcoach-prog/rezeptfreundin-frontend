@@ -14,13 +14,12 @@ body {
     background-image: url('hintergrund.jpg');
     background-size: cover;
     background-position: center;
-    /* KORREKTUR: 'fixed' entfernt, was auf Mobilgeräten Probleme macht */
-    background-attachment: scroll; 
+    background-attachment: fixed;
     color: var(--color-text);
     min-height: 100vh;
 }
 
-/* NEU: Der Container, der alles zentriert */
+/* Der Container, der alles zentriert */
 .page-wrapper {
     display: flex;
     flex-direction: column;
@@ -36,7 +35,7 @@ body {
 .app-container {
     width: 100%;
     max-width: 600px;
-    /* Die starre Höhe wurde entfernt, damit sich die Box an den Inhalt anpasst */
+    /* KORREKTUR: Starre Höhe entfernt */
     max-height: 750px; /* Die maximale Höhe bleibt als Begrenzung */
     background-color: white;
     border-radius: 20px;
@@ -157,15 +156,14 @@ body {
     background-color: var(--color-secondary);
 }
 
-/* NEU: Footer außerhalb der Box */
+/* Footer außerhalb der Box */
 .footer {
     width: 100%;
     max-width: 600px;
     padding: 15px 20px;
-    margin-top: 15px; /* Fügt einen kleinen Abstand zur App-Box hinzu */
+    margin-top: 15px;
     text-align: center;
     box-sizing: border-box;
-    /* NEU: Dezenter, halb-durchsichtiger Hintergrund für Lesbarkeit */
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 12px;
 }
@@ -177,3 +175,20 @@ body {
     font-weight: 500;
 }
 .footer-links a:hover {
+    text-decoration: underline;
+}
+.footer .copyright {
+    margin-top: 10px;
+    font-size: 11px;
+    color: white;
+    opacity: 0.8;
+    margin-bottom: 0;
+}
+
+/* Anpassungen für große Bildschirme */
+@media (min-width: 1024px) {
+    .page-wrapper {
+        align-items: flex-start; /* Box links ausrichten */
+        padding-left: 5%;
+    }
+}
