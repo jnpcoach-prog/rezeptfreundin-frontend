@@ -147,7 +147,7 @@ body {
     background-color: var(--color-secondary);
 }
 
-/* Footer außerhalb der Box */
+/* Footer */
 .footer {
     padding: 15px 20px;
     background-color: #f4f7f6;
@@ -177,3 +177,4 @@ body {
         padding-left: 5%;
     }
 }
+
