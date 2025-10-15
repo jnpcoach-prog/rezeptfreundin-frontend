@@ -22,7 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 60px 0 0 5%;
+    padding: 60px 0 0 0;
     box-sizing: border-box;
     overflow-x: hidden;
 }
@@ -38,6 +38,7 @@ body {
     flex-direction: column;
     overflow: hidden;
     margin-bottom: 40px;
+    margin-left: 5%;
 }
 
 .app-header {
@@ -161,10 +162,7 @@ body {
 
 /* Footer */
 .footer {
-    width: 100vw;
-    position: relative;
-    left: 0;
-    margin-left: calc(-5%);
+    width: 100%;
     padding: 15px 20px;
     background-color: #f4f7f6;
     text-align: center;
@@ -206,14 +204,15 @@ body {
 @media (max-width: 768px) {
     body {
         align-items: center;
-        padding: 20px;
+        padding: 20px 0 0 0;
     }
     
-    .footer {
-        margin-left: -20px;
-        width: 100vw;
+    .app-container {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
+
 
 
 
