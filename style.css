@@ -220,7 +220,17 @@ body {
         margin-left: 20px;
         margin-right: 20px;
     }
+    
+    .footer {
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin-left: 0;
+        margin-right: 0;
+        position: relative;
+    }
 }
+
 
 
 
