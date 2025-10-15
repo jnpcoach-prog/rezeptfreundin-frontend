@@ -202,9 +202,13 @@ body {
 @media (min-width: 1024px) {
     body {
         justify-content: flex-start;
-        padding-left: 5%;
+    }
+    
+    .app-container {
+        margin-left: 5%;
     }
 }
+
 /* Anpassungen für Mobilgeräte */
 @media (max-width: 768px) {
     body {
@@ -217,6 +221,7 @@ body {
         margin-right: 20px;
     }
 }
+
 
 
 
