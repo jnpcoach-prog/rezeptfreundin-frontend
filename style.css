@@ -18,31 +18,22 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 20px 20px 0;
+    align-items: center;
+    padding: 20px 0 0 0;
     box-sizing: border-box;
-}
-
-/* NEU: Page Wrapper für Footer-Positionierung */
-.page-wrapper {
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    min-height: calc(100vh - 40px);
 }
 
 /* Der Hauptcontainer der App */
 .app-container {
     width: 100%;
+    max-width: 600px;
     background-color: white;
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    flex-grow: 1;
+    margin: 0 20px 40px 20px;
 }
 
 .app-header {
@@ -166,13 +157,12 @@ body {
 
 /* Footer */
 .footer {
+    width: 100%;
     padding: 15px 20px;
-    background-color: white;
+    background-color: #f4f7f6;
     text-align: center;
-    border-top: 1px solid var(--color-border);
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-    flex-shrink: 0;
+    border-top: 1px solid #e9e9e9;
+    margin-top: auto;
 }
 
 .footer-links {
@@ -204,4 +194,5 @@ body {
         padding-left: 5%;
     }
 }
+
 
